@@ -1,0 +1,10 @@
+{
+  "id": "baiyi-weekly-planner",
+  "name": "One Week",
+  "version": "1.6.0",
+  "minAppVersion": "1.14.5",
+  "description": "Plan your week around your class timetable with tasks, routines, a monthly calendar, and an Eisenhower matrix.",
+  "author": "yibai435-star",
+  "isDesktopOnly": true,
+  "authorUrl": "https://github.com/yibai435-star"
+}

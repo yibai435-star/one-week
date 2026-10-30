@@ -1,0 +1,15 @@
+node_modules/
+dist/
+data.json
+semester.json
+semester-data.js
+*.zip
+*.png
+qa-*.js
+engine.test.cjs
+homepage.test.cjs
+
+!docs/*.png
+scripts/localize-source.cjs
+scripts/extract-i18n.cjs
+scripts/i18n-tokens.json

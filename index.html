@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>One Week</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>html,body{margin:0;height:100%;background:#f7fafc}#planner{height:100dvh}</style>
+</head>
+<body>
+  <div id="planner" class="weekly-planner-root"></div>
+  <script src="locales/en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="engine.js"></script>
+  <script src="default-semester.js"></script>
+  <script src="note-links.js"></script>
+  <script src="course-import.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      const engine = window.WeekPlannerEngine;
+      window.WEEK_PLANNER_SEMESTER = window.WeekPlannerDefaults.create(engine);
+      const key = "baiyi-weekly-planner-v1";
+      let state;
+      try {
+        const saved = localStorage.getItem(key);
+        state = saved ? engine.normalizeState(JSON.parse(saved), window.WEEK_PLANNER_SEMESTER) : engine.DEFAULT_STATE(window.WEEK_PLANNER_SEMESTER, engine.formatDate(new Date()));
+      } catch (error) {
+        document.getElementById("planner").textContent = "已有数据无法读取，未覆盖。请先保留浏览器中的数据或从备份恢复：" + error.message;
+        return;
+      }
+      window.plannerApp = window.WeekPlannerApp.mount(document.getElementById("planner"), {
+        state,
+        engine,
+        onSave: async function (next) { localStorage.setItem(key, JSON.stringify(next)); }
+      });
+    }());
+  </script>
+</body>
+</html>
