@@ -13,3 +13,5 @@ homepage.test.cjs
 scripts/localize-source.cjs
 scripts/extract-i18n.cjs
 scripts/i18n-tokens.json
+
+/main.js

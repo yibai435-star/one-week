@@ -19,7 +19,7 @@ test('new users start with an empty semester anchored to their current Monday', 
   assert.equal(engine.DEFAULT_STATE(settings, '2026-10-27').selectedWeek, 1);
 });
 test('production entry points never import a personal timetable', () => {
-  for (const file of ['main.js','index.html','build.cjs']) {
+  for (const file of ['plugin.js','index.html','build.cjs']) {
     const source = fs.readFileSync(require('node:path').join(__dirname, file), 'utf8');
     assert.doesNotMatch(source, /semester\.json|semester-data\.js/);
   }

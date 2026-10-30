@@ -1,13 +1,13 @@
 {
   "name": "baiyi-weekly-planner",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "private": true,
   "type": "commonjs",
   "description": "A local timetable and weekly task planner for university students in Obsidian",
   "scripts": {
     "build": "node build.cjs",
     "test": "node --test product.test.cjs note-links.test.cjs i18n.test.cjs",
-    "check": "node --check app.js && node --check engine.js && node --check main.js"
+    "check": "node --check app.js && node --check engine.js && node --check plugin.js"
   },
   "devDependencies": {
     "esbuild": "0.28.2"

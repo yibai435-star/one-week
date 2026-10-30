@@ -6,8 +6,8 @@ const english = JSON.parse(fs.readFileSync(path.join(directory, 'locales/en.json
 fs.writeFileSync(path.join(directory, 'locales/en.js'), `window.ONE_WEEK_EN = ${JSON.stringify(english)};\n`);
 esbuild.buildSync({
   absWorkingDir: directory,
-  entryPoints: ['main.js'],
-  outfile: 'dist/main.js',
+  entryPoints: ['plugin.js'],
+  outfile: 'main.js',
   bundle: true,
   platform: 'node',
   format: 'cjs',
@@ -15,4 +15,6 @@ esbuild.buildSync({
   external: ['obsidian'],
   logLevel: 'info'
 });
+fs.mkdirSync(path.join(directory, 'dist'), { recursive: true });
+fs.copyFileSync(path.join(directory, 'main.js'), path.join(directory, 'dist/main.js'));
 for (const filename of ['styles.css', 'manifest.json', 'README.md']) fs.copyFileSync(path.join(directory, filename), path.join(directory, 'dist', filename));

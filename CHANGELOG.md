@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.1 · 2026-10-30
+
+- Regenerate the dependency lockfile from a clean directory for cross-platform installs.
+- Separate source entry and release bundle for reproducible build verification.
+- Replace forced CSS overrides with scoped selectors and remove unused compatibility rules.
+- Publish only the three supported plugin release assets.
+
+
 ## 1.6.0 · 2026-10-30
 
 - Release as One Week with Chinese and English interfaces.
