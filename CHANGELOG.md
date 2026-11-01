@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.2 · 2026-11-01
+
+- Complete unscheduled tasks directly from the weekly task sidebar.
+- Reuse the same completion state across views, undo, and the completed list.
+- Keep bulk-selection checkboxes separate from completion controls.
+
 ## 1.6.1 · 2026-10-30
 
 - Regenerate the dependency lockfile from a clean directory for cross-platform installs.

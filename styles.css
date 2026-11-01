@@ -262,7 +262,7 @@
 .weekly-planner-root[lang] .wp-task-card:hover{border-color:var(--wp-green-edge);background:var(--wp-green-light)}
 .weekly-planner-root[lang] .wp-task-card.is-selected{border-color:var(--wp-green-edge);background:var(--wp-green-light);box-shadow:inset 0 0 0 1px var(--wp-green-line)}
 
-.weekly-planner-root[lang] input.wp-task-select{align-self:start;justify-self:start;flex:0 0 15px;margin-top:2px}
+.weekly-planner-root[lang] input.wp-task-done,.weekly-planner-root[lang] input.wp-task-select{align-self:start;justify-self:start;flex:0 0 15px;margin-top:2px}
 .weekly-planner-root[lang] .wp-task-grip{color:var(--wp-muted);padding-top:1px;font-size:18px;line-height:1}
 .weekly-planner-root[lang] .wp-task-name{display:block;justify-content:flex-start;align-items:flex-start;background:none;border:0;padding:0;margin:0;min-width:0;max-width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere;font-weight:550;cursor:pointer;line-height:1.5}
 .weekly-planner-root[lang] .wp-task-heading{display:flex;align-items:flex-start;gap:6px;min-width:0}
